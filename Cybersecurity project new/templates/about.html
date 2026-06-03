@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section py-5">
+  <div class="container py-4">
+    <div class="section-heading mb-4">
+      <span class="eyebrow">About This Project</span>
+      <h1 class="display-5 mt-3 mb-0">Application Security Assessment Overview</h1>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4">What is Application Security Assessment?</h2>
+          <p class="text-white-50 mb-0">Application security assessment is the process of identifying weaknesses in a web application, reviewing its defensive controls, and understanding how exposed input, headers, and services affect the attack surface.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4">Why It Matters</h2>
+          <p class="text-white-50 mb-0">Cybersecurity teams use assessments to detect preventable issues early, reduce risk, support compliance, and protect users from avoidable data exposure or tampering.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4">OWASP Top 10 Overview</h2>
+          <p class="text-white-50 mb-0">The OWASP Top 10 highlights common risk categories such as injection, broken access control, security misconfiguration, and identification weaknesses that are frequently seen in modern web applications.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4">Assessment Lifecycle</h2>
+          <p class="text-white-50 mb-0">A typical workflow includes scope definition, target validation, safe testing, result analysis, reporting, and remediation guidance. This project demonstrates that lifecycle in a simplified form.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-glass p-4 mt-4">
+      <h2 class="h4">Ethical Usage Notice</h2>
+      <p class="text-white-50 mb-0">Only test systems you own or have explicit permission to assess. This project is intentionally limited to safe checks for educational and authorized security testing only.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
