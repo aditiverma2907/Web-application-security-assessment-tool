@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Web Application Security Assessment Tool
 
 A full-stack educational cybersecurity web application built with Flask, HTML5, CSS3, Bootstrap 5, and JavaScript. The project demonstrates a basic application security assessment workflow for authorized and demo websites only.
@@ -118,3 +119,6 @@ The scan history page uses a lightweight SQLite database stored in the project f
 Only use this tool on systems you own or are explicitly authorized to test.
 
 For Educational and Authorized Security Testing Purposes Only.
+=======
+# Web-application-security-assessment-tool
+>>>>>>> e394b5f14eeddd3e45a604aca2fd2e3fddd3e9ab
