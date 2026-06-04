@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section py-5">
+  <div class="container py-4">
+    <div class="section-heading mb-4">
+      <span class="eyebrow">Scanner Modules</span>
+      <h1 class="display-5 mt-3 mb-0">Features of the Assessment Tool</h1>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-shield-lock display-6 mb-3"></i>
+          <h2 class="h5">Header Analysis</h2>
+          <p class="text-white-50 mb-0">Checks for security headers that help reduce clickjacking, MIME sniffing, and script injection risk.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-plug-fill display-6 mb-3"></i>
+          <h2 class="h5">Port Scanning</h2>
+          <p class="text-white-50 mb-0">Uses socket connections to check common ports and highlight unnecessary exposure on the target host.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-code-square display-6 mb-3"></i>
+          <h2 class="h5">XSS Detection</h2>
+          <p class="text-white-50 mb-0">Submits a harmless reflection payload to forms and checks whether it is returned in the response.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-database-lock display-6 mb-3"></i>
+          <h2 class="h5">SQL Injection Detection</h2>
+          <p class="text-white-50 mb-0">Uses a safe demo payload to look for SQL error messages or suspicious database-related responses.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-bar-chart-line-fill display-6 mb-3"></i>
+          <h2 class="h5">Risk Classification</h2>
+          <p class="text-white-50 mb-0">Assigns Low, Medium, High, or Critical severity to help present findings clearly during review.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="feature-card card-glass p-4 h-100">
+          <i class="bi bi-file-earmark-text display-6 mb-3"></i>
+          <h2 class="h5">Report Generation</h2>
+          <p class="text-white-50 mb-0">Builds a structured scan summary that can later be extended for PDF export or database storage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

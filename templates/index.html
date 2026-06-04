@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="container py-5">
+    <div class="row align-items-center g-5 py-4">
+      <div class="col-lg-7">
+        <span class="eyebrow mb-3 d-inline-flex align-items-center gap-2">
+          <i class="bi bi-broadcast-pin"></i> Application Security Assessment Lab
+        </span>
+        <h1 class="display-4 hero-title mb-3">Web Application Security Assessment Tool</h1>
+        <p class="lead text-white-75 mb-4">
+          A professional academic project that demonstrates safe, basic vulnerability assessment workflows on authorized demo websites.
+        </p>
+        <div class="feature-pills d-flex flex-wrap gap-2 mb-4">
+          <span class="pill"><i class="bi bi-shield-check me-1"></i> Security Headers</span>
+          <span class="pill"><i class="bi bi-plug me-1"></i> Open Ports</span>
+          <span class="pill"><i class="bi bi-code-slash me-1"></i> XSS Reflection</span>
+          <span class="pill"><i class="bi bi-database-check me-1"></i> SQL Error Checks</span>
+        </div>
+        <p class="mb-0 text-white-50">
+          Learn how application security assessment identifies weaknesses, explains risk, and supports ethical security testing.
+        </p>
+      </div>
+      <div class="col-lg-5">
+        <div class="scan-card card-glass p-4 shadow-lg">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h4 mb-0">Launch Scan</h2>
+            <span class="status-dot"></span>
+          </div>
+          <form id="scanForm" action="/scan" method="post" class="scan-form">
+            <label class="form-label">Target URL</label>
+            <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text bg-transparent text-white border-secondary"><i class="bi bi-link-45deg"></i></span>
+              <input type="text" class="form-control cyber-input" name="url" placeholder="http://testphp.vulnweb.com" value="{{ entered_url|default('') }}" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-cyber btn-lg">
+                <span class="btn-text"><i class="bi bi-search me-2"></i>Start Security Assessment</span>
+                <span class="btn-spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              </button>
+            </div>
+          </form>
+          {% if error_message %}
+          <div class="alert alert-danger mt-3 mb-0">{{ error_message }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="info-card card-glass h-100 p-4">
+          <i class="bi bi-journal-text display-6 mb-3"></i>
+          <h3 class="h5">Introduction to Application Security</h3>
+          <p class="mb-0 text-white-50">Application security protects software logic, user data, and business workflows from common web threats.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card card-glass h-100 p-4">
+          <i class="bi bi-search-heart display-6 mb-3"></i>
+          <h3 class="h5">Importance of Assessment</h3>
+          <p class="mb-0 text-white-50">Vulnerability assessment helps identify missing controls early, before flaws become real security incidents.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card card-glass h-100 p-4">
+          <i class="bi bi-exclamation-triangle display-6 mb-3"></i>
+          <h3 class="h5">Educational Disclaimer</h3>
+          <p class="mb-0 text-white-50">This project is developed strictly for educational purposes and authorized security testing only.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="disclaimer-banner card-glass p-4">
+          <div class="row align-items-center g-3">
+            <div class="col-lg-9">
+              <h2 class="h4 mb-2">Ethical Use Notice</h2>
+              <p class="mb-0 text-white-50">Use only with explicit authorization. The scanner performs basic checks to demonstrate assessment concepts for coursework and internship learning.</p>
+            </div>
+            <div class="col-lg-3 text-lg-end">
+              <span class="badge rounded-pill bg-warning text-dark px-3 py-2">Authorized Testing Only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4" id="contact">
+      <div class="col-lg-7">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4 mb-3">Project Contact</h2>
+          <p class="text-white-50 mb-3">This section can be updated later with your department, internship supervisor, or academic contact details.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <span class="contact-chip"><i class="bi bi-envelope me-2"></i>security.lab@example.edu</span>
+            <span class="contact-chip"><i class="bi bi-geo-alt me-2"></i>Cybersecurity Academic Project</span>
+            <span class="contact-chip"><i class="bi bi-clock-history me-2"></i>Scan History Placeholder</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card-glass p-4 h-100">
+          <h2 class="h4 mb-3">Before You Scan</h2>
+          <ul class="list-unstyled mb-0 text-white-50">
+            <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Use a demo site or a system you are authorized to test.</li>
+            <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Review results with risk labels and recommendations.</li>
+            <li><i class="bi bi-check2-circle me-2"></i>Discuss the findings as part of your viva presentation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

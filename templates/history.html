@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section py-5">
+  <div class="container py-4">
+    <div class="section-heading mb-4">
+      <span class="eyebrow">Stored Scans</span>
+      <h1 class="display-5 mt-3 mb-0">Scan History</h1>
+      <p class="text-white-50 mt-3 mb-0">This page shows previously saved assessment runs from the modular SQLite history layer.</p>
+    </div>
+
+    {% if history_items %}
+    <div class="table-responsive card-glass p-3 p-md-4">
+      <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Timestamp</th>
+            <th>Risk</th>
+            <th>Total Findings</th>
+            <th>Critical</th>
+            <th>High</th>
+            <th>Medium</th>
+            <th>Low</th>
+            <th>Open Ports</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in history_items %}
+          <tr>
+            <td class="text-break">{{ item.target_url }}</td>
+            <td>{{ item.scan_timestamp }}</td>
+            <td><span class="badge risk-badge {{ item.overall_risk|lower }}">{{ item.overall_risk }}</span></td>
+            <td>{{ item.total_findings }}</td>
+            <td class="text-danger">{{ item.critical }}</td>
+            <td class="text-warning">{{ item.high }}</td>
+            <td class="text-info">{{ item.medium }}</td>
+            <td class="text-success">{{ item.low }}</td>
+            <td>{{ item.open_ports }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="card-glass p-5 text-center">
+      <h2 class="h4 mb-3">No Saved Scans Yet</h2>
+      <p class="text-white-50 mb-4">Run a security assessment first. Each completed scan is stored here for later review.</p>
+      <a href="/" class="btn btn-cyber px-4"><i class="bi bi-play-circle me-2"></i>Start a Scan</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
