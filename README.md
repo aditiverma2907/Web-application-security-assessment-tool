@@ -3,9 +3,7 @@
 ## Live Demo
 
 Website: https://web-application-security-assessment-tool.onrender.com
-## GitHub Repository
 
-Source Code: https://github.com/yourusername/yourrepository
 # Web Application Security Assessment Tool
 
 A full-stack educational cybersecurity web application built with Flask, HTML5, CSS3, Bootstrap 5, and JavaScript. The project demonstrates a basic application security assessment workflow for authorized and demo websites only.
